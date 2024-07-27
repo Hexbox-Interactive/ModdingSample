@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net7.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'ios' ">net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GodotSharp">
+      <Private>false</Private>
+      <HintPath>..\..\..\Hex2D\src\.godot\mono\temp\bin\Debug\GodotSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Hex2D">
+      <Private>false</Private>
+      <HintPath>..\..\..\Hex2D\src\.godot\mono\temp\bin\Debug\Hex2D.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
